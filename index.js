@@ -10,8 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // });
 
 //initialize the db link
-const sequelize = new Sequelize("mysql://tasks_floorhatme:fd69a1f9449ff5668788022febb119c62534c84a@07o.h.filess.io:3306/tasks_floorhatme")
-// const sequelize = new Sequelize("mysql://sql9607590:55GkyGymtd@sql9.freesqldatabase.com:3306/sql9607590")
+const sequelize = new Sequelize(process.env.DB_URL)
 
 //define the schema
 const blog_table = sequelize.define(
